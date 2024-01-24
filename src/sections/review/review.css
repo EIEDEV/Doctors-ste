@@ -1,0 +1,38 @@
+#review h2{
+    margin-bottom: 2rem;
+}
+
+.review-container{
+    padding: 1rem 1.5rem;
+
+}
+
+.rev{
+    padding: 1rem;
+    position: relative;
+}
+.rev img{
+    width: 3rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -4px;
+    z-index: 99;
+}
+
+.rev p{
+    padding-top: 3rem;
+}
+
+.rev hr{
+    border-top: 1px solid #00adfc;
+    margin: 1.5rem 0;
+}
+
+.rev h5{
+    text-align: center;
+}
+#review{
+    margin: unset;
+    padding: unset;
+}

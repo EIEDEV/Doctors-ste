@@ -1,0 +1,84 @@
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 0.8fr 0.8fr 1fr;
+    gap: 1rem;
+    border-top: 1px solid #00adfc;
+}
+
+.name {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.name img{
+    width: 4rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+div > h4{
+    padding-top: 1.5rem;
+}
+
+.contact> h4, .Account>h4, .about>h4, .Resources>h4{
+    margin-bottom: 2rem;
+}
+
+.locatio{
+    width: fit-content;
+}
+.location{
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.location h6{
+    font-size: 1.4rem
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .name {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-container{
+        grid-template-columns: 1fr;
+       padding: unset;
+       margin: unset;
+    }
+    .name{
+        display: none;
+    }
+    .contact>h4,
+    .Account>h4,
+    .about>h4,
+    .Resources>h4 {
+        margin-bottom: 1rem;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    }
+    .locatio{
+        display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+    }
+    .location{
+        gap: 0.8rem;
+    }
+    .location p{
+        width: max-content;
+    }
+}

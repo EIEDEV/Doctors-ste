@@ -1,0 +1,13 @@
+ .healthcare-container img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     overflow: hidden;
+     border-radius: 1rem;
+     border: 2px solid black;
+ }
+
+ #healthcare h2 {
+     text-transform: uppercase;
+     margin-bottom: 3rem;
+ }

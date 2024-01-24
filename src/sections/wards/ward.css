@@ -1,0 +1,65 @@
+.ward-container{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat( 4, minmax(290px, 1fr));
+    gap: 4rem;
+}
+
+#wards h2{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.dental {
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: #f5f5dc;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.dental img{
+    aspect-ratio: 1/0.8;
+    border-radius: 1rem;
+}
+
+.dental h3{
+    color: #333333;
+}
+
+@media screen and (max-width: 1024px) {
+    .ward-container {
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+    }
+
+    #wards {
+        padding: unset;
+        margin: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ward-container{
+        grid-template-columns: 1fr;
+    }
+    #wards {
+        padding: unset;
+        margin: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #wards h2{
+        width: min-content;
+        margin: 0 auto;
+    }
+}
+

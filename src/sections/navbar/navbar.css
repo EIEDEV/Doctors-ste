@@ -1,0 +1,123 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bars {
+    display: none;
+}
+
+.left-s{
+    display: flex;
+    align-items: center;
+}
+
+.left-s img{
+    margin-top: 0.5rem;
+    width: 6rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.left-s h3 span{
+    color: #00adfc;
+}
+
+
+.right-s{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    padding: 0.5rem 0;
+}
+
+a{
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+a:hover{
+    color: #00adfc;
+}
+
+input{
+    width: 9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #00adfc;
+}
+input::placeholder{
+    color: black;
+}
+
+ @media screen and (max-width: 1024px) {
+.nav-links {
+        position: absolute;
+        right: 1.5rem;
+        z-index: 9999;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        flex-direction: column;
+        top: 5rem;
+        padding: 3rem;
+        display: none;
+    }
+        .nav-links li a {
+            color: white;
+            font-size: 1.5rem;
+        }
+        input {
+            display: none;
+        }
+                .bars {
+                    display: block;
+                    margin-top: 11px;
+                    font-size: 1.5rem;
+                }
+} 
+
+@media screen and (max-width: 600px) {
+   .left-s img{
+    width: 3rem;
+   }
+   .left-s h3{
+    font-size: 1.2rem;
+    margin-top: 4px;
+   }
+   
+    .nav-links{
+        position: absolute;
+        right: 1.5rem;
+        z-index: 9999;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        flex-direction: column;
+        top: 3rem;
+        padding: 1.3rem;
+        display: none;
+    }
+        .nav-links li a{
+            color: white;font-size: unset;
+        }
+    input{
+        display: none;
+    }
+    .bars{
+        display: block;
+        margin-top: 9px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links{
+    display: block;}
+}

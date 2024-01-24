@@ -1,0 +1,128 @@
+.header-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.headerimage{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: relative;
+}
+.headerimage img{
+    width: 30rem;
+    overflow: hidden;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    border: 1rem solid white;
+}
+.cicle{
+    width: 35rem;
+    aspect-ratio: 1/1;
+    background-color: #00adfc;
+    border-radius: 50%;
+    z-index: -99;
+    position: absolute;
+    bottom: 0;
+}
+
+.small-sides{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.small-sides >h3{
+    text-transform: uppercase;
+    width: min-content;
+    display: block;
+}
+
+.equipment{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+
+.equipment>h2{
+    width: min-content;
+}
+
+.doc-number,.patient-number{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+@media screen and (max-width: 1024px) {
+    .cicle {
+        width: 90%;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+    }
+    .headerimage>img {
+        width: 90%;
+        top: 40%;
+        transform: translateY(-30%);
+    }
+    .header-container {
+        grid-template-areas: "left center center"
+            "right right right";
+    }
+
+    .header-container>:first-child {
+        grid-area: left;
+        gap: 8rem;
+    }
+
+    .header-container>:nth-child(2) {
+        grid-area: center;
+    }
+
+    .header-container>:nth-child(3) {
+        grid-area: right;
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cicle{
+        width: 100%;
+        position: absolute;
+        top: 30%;
+            transform: translateY(-50%);
+    }
+    .headerimage> img{
+        width: 100%;
+        top: 30%;
+        transform: translateY(-30%);
+    }
+    .header-container{
+        grid-template-areas: "left center center" 
+        "right right right";
+    }
+
+    .header-container>:first-child{
+        grid-area: left;
+        gap: 8rem;
+    }
+
+    .header-container>:nth-child(2){
+        grid-area: center;
+    }
+    .header-container>:nth-child(3) {
+        grid-area: right;
+        margin: 2rem 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .small-sides{
+        grid-template-rows: none;
+    }
+    .small-sides h3{
+        font-size: 0.7rem;
+        margin-top: 2rem;
+    }
+}

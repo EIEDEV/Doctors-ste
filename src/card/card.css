@@ -1,0 +1,25 @@
+.card {
+    border: 2px solid white;
+    color: black;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-right: 1.5rem;
+    background-color: #444444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    background-color: #00adfc;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width:600px) {
+    .card {
+        padding: 1.2rem;
+    }
+}
